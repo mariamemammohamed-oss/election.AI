@@ -7,13 +7,13 @@ import os
 st.image("robot.png", width=200)
 
 # قراءة كل الشيتات
-xls = pd.ExcelFile("data.xlsx")
+xls = pd.ExcelFile("DATA.xlsx")
 
 # اختيار الشيت
 sheet = st.selectbox("اختار الشيت", xls.sheet_names)
 
 # قراءة الشيت المختار
-df = pd.read_excel("data.xlsx", sheet_name=sheet)
+df = pd.read_excel("DATA.xlsx", sheet_name=sheet)
 
 st.write("📊 البيانات:", df.head())
 
